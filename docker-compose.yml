@@ -1,0 +1,12 @@
+services:
+  perm-check:
+    build: .
+    container_name: perm-check
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      - TZ=${TZ:-America/Chicago}
+      - CRON_SCHEDULE=${CRON_SCHEDULE:-0 10 * * *}
+    volumes:
+      - ./logs:/var/log

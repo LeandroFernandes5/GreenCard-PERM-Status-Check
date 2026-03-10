@@ -1,0 +1,4 @@
+pushover-complete>=2.0.0
+aiohttp>=3.9.0
+playwright>=1.40.0
+python-dotenv
